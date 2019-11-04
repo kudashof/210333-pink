@@ -8,12 +8,16 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип Пинк">
-      </a>
-      <h1 class="visually-hidden">Пинк - это мобильное приложение для раскрашивания серых будней в розовый цвет.</h1>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="../img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+        </a>
+        <h1 class="visually-hidden">Пинк - это мобильное приложение для раскрашивания серых будней в розовый цвет.</h1>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__site-list">
             <li class="main-nav__item">
@@ -58,11 +62,11 @@
               </ul>
             </fieldset>
             <fieldset class="feedback-container__achievement">
-              <legend class="feedback-container__achievement-title">Ваши безбашенные достижения в путешествии</legend>
+              <legend class="feedback-container__title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="feedback-container__list">
                 <li class="feedback-container__list-item">
                   <input class="checkbox" type="checkbox" name="selfie" id="selfie" checked>
-                  <label class="description" for="selfie">Сделала селфи с акулой</label>
+                  <label class="description" for="selfie">Сделал селфи с акулой</label>
                 </li>
                 <li class="feedback-container__list-item">
                   <input class="checkbox" type="checkbox" name="burn" id="burn" checked>
@@ -89,7 +93,7 @@
             <fieldset class="feedback-container__user-contacts">
               <ul class="feedback-container__list">
                 <li class="feedback-container__list-item">
-                  <label class="phone-number" for="phone-number">Номер телефона</label>
+                  <label class="name" for="phone-number">Номер телефона</label>
                   <input class="tel" type="tel" name="phone-number" id="phone-number" placeholder="Номер, пожалуйста" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
                 </li>
                 <li class="feedback-container__list-item">
@@ -99,24 +103,24 @@
               </ul>
             </fieldset>
             <fieldset class="feedback-container__platform">
-              <legend class="feedback-container__platform-title">С какими приложением путешествовали?</legend>
+              <legend class="feedback-container__title">С какими приложением путешествовали?</legend>
               <ul class="feedback-container__list">
                 <li class="feedback-container__list-item">
                   <input class="radio" type="radio" name="app" id="ios" value="ios" checked>
-                  <label class="platform-item" for="ios">Pink для iOS</label>
+                  <label class="description" for="ios">Pink для iOS</label>
                 </li>
                 <li class="feedback-container__list-item">
                   <input class="radio" type="radio" name="app" id="android" value="android">
-                  <label class="platform-item" for="android">Pink для Android</label>
+                  <label class="description" for="android">Pink для Android</label>
                 </li>
                 <li class="feedback-container__list-item">
                   <input class="radio" type="radio" name="app" id="windows" value="windows">
-                  <label class="platform-item" for="windows">Windows Phone</label>
+                  <label class="description" for="windows">Windows Phone</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="feedback-container__comment">
-              <legend class="feedback-container__comment-title">Опишите свои эмоции</legend>
+              <legend class="feedback-container__title">Опишите свои эмоции</legend>
               <textarea class="user-comment" name="text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </fieldset>
             <div class="feedback-container__button">
