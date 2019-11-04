@@ -1,0 +1,71 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+  font-family: @font-family;
+  font-size: @font-size-big;
+  font-weight: 700;
+}
+
+.download-app__button {
+  display: inline-block;
+  position: absolute;
+  width: 281px;
+  text-align: center;
+  color: #ffffff;
+  border-color: #ffffff;
+  line-height: 1;
+  margin-top: 30px;
+  margin-left: -141px;
+}
+
+.download-app__button:hover {
+  background-color: @color-white;
+  color: @color-pink;
+}
+
+.download-app__button:active {
+  color: @color-pink-light;
+}
+
+.editor__button {
+  max-width: 280px;
+  outline: none;
+  text-align: center;
+}
+
+.editor__button--post {
+  color: @color-pink;
+  border-color: @color-pink;
+
+  &:hover {
+    background-color: @color-pink;
+    color: @color-white;
+  }
+
+  &:active {
+    background-color: @color-pink;
+    color: @color-white-opacity;
+  }
+}
+
+.editor__button--cancel {
+  border-color: @color-gray-light;
+  color: @color-gray-light;
+
+  &:hover {
+    border-color: @color-gray;
+    color: @color-gray;
+  }
+
+  &:active {
+    background-color: @color-gray;
+    color: @color-white-opacity;
+  }
+}

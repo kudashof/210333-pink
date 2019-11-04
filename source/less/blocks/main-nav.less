@@ -1,0 +1,30 @@
+.main-nav__item {
+  border-bottom: 1px solid @color-black;
+  font-size: @font-size-big;
+  line-height: @line-height-big;
+  text-transform: uppercase;
+
+  &:first-child {
+    border-top: 1px solid @color-black;
+  }
+}
+
+.main-nav__item a {
+  color: @color-white;
+
+  &:hover {
+    color: @color-pink;
+  }
+
+  &:active {
+    color: @color-pink-active;
+  }
+}
+
+.main-nav__wrapper {
+  min-width: 320px;
+}
+
+.main-nav__site-list {
+  display: none;
+}
