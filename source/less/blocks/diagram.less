@@ -5,6 +5,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .diagram .container {
+    display: flex;
+    padding-top: 60px;
+  }
+
   .diagram {
     display: flex;
     justify-content: flex-end;
@@ -12,10 +17,8 @@
     width: auto;
     padding: 0 20px;
 
-    &__wrapper {
-      display: block;
-      position: absolute;
-      margin-top: 43px;
+    &__right {
+      width: 50%;
     }
 
     &__title {
@@ -25,7 +28,7 @@
 
     &__description {
       color: @color-dark-blue;
-      width: 296px;
+      width: 305px;
     }
 
     &__link {
@@ -37,12 +40,11 @@
 
 @media (min-width: @desktop-width) {
   .diagram {
-    width: 960px;
+    background-color: rgb(242, 242, 242);
 
-  }
-
-  &__description {
-    font-size: @font-size-big;
-    width: 525px;
+    &__description {
+      font-size: @font-size-big;
+      width: 521px;
+    }
   }
 }

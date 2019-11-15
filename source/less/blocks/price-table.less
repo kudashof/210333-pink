@@ -65,10 +65,9 @@ tr:not(:first-child), td {
 
 @media (min-width: @tablet-width) {
   .price-table {
-    position: relative;
-    width: 620px;
-    height: 220px;
-    margin-left: 66px;
+    width: 100%;
+    transform: none;
+    position: static;
   }
 
   tr {
@@ -88,5 +87,13 @@ tr:not(:first-child), td {
 
   .price-table__item {
     text-transform: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price-table {
+    width: 90%;
+    transform: none;
+    position: static;
   }
 }

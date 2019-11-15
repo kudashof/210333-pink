@@ -2,8 +2,20 @@
   color: @color-dark-blue;
 }
 
+.user-posts__wrapper {
+  background-color: rgb(242, 242, 242);
+  margin: 0 20px;
+}
+.user-posts__photo {
+  margin: 0 20px;
+}
+
 .user-posts__author {
   font-weight: 700;
+}
+
+.user-posts__comment {
+  margin: 15px 20px;
 }
 
 .user-posts__time {
@@ -18,4 +30,21 @@
 .user-posts__like {
   background: url("../img/icon-heart.svg") no-repeat;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-posts--start {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .user-posts:not(.user-posts--start) {
+    width: 300px;
+  }
+
+  .page-main__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

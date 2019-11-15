@@ -53,14 +53,30 @@
 @media (min-width: @desktop-width) {
   .main-nav {
     display: flex;
+    position: static;
     justify-content: space-between;
     align-items: center;
-    width: 940px;
     margin: 0 auto;
   }
+
   .main-nav__site-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-width: 625px;
+    margin-top: -85px;
+    margin-left: 130px;
+    background-color: transparent;
+  }
+
+  .main-nav__item,
+  .main-nav__item:first-child,
+  .main-nav__item:last-child {
+    border: none;
+  }
+
+  .main-nav__item {
+    text-transform: none;
+    font-weight: 400;
   }
 }

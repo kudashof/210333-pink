@@ -3,8 +3,44 @@
   background-color: @color-white;
 }
 
+.page-main__wrapper > .container {
+  width: 275px;
+  text-align: center;
+}
+
 .page-main__text {
   font-weight: 400;
   line-height: 30px;
   color: @color-dark-blue;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-main__text span {
+  display: block;
+}
+
+.page-main__text--form {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__wrapper > .container {
+    width: 432px;
+    text-align: center;
+  }
+
+  .page-main__text--form {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__wrapper > .container {
+    width: 625px;
+  }
+
+  .page-main__text--form {
+    display: inline;
+  }
 }

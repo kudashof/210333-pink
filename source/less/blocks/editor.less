@@ -1,3 +1,27 @@
-li {
-  list-style-type: none;
+.editor {
+  background-color: rgb(242, 242, 242);
+}
+
+.editor__image {
+  margin: 20px 20px 0 20px;
+}
+
+.editor-filters {
+  margin: 0 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .editor__wrapper {
+    display: flex;
+  }
+
+  .editor-filters {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .editor__image {
+    width: 50%;
+  }
 }

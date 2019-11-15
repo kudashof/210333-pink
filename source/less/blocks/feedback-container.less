@@ -3,6 +3,7 @@
   line-height: 30px;
   color: @color-pink;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .feedback-container__title {
@@ -10,6 +11,12 @@
   line-height: 18px;
   color: @color-pink;
   text-transform: uppercase;
+  text-align: center;
+  width: 218px;
+}
+
+.feedback-container__user-contacts > legend {
+  display: none;
 }
 
 .description {
@@ -26,6 +33,155 @@
   text-transform: uppercase;
 }
 
+.feedback-container__field span {
+  display: none;
+}
+
 .feedback-container__field sup {
   color: @color-pink;
+}
+
+.feedback-container__list {
+  padding: 0;
+}
+
+.feedback-container__user-name {
+  padding: 0;
+  margin: 0 20px;
+}
+
+.text {
+  width: 280px;
+  height: 62px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.feedback-container__achievement {
+  background-color: rgb(242, 242, 242);
+}
+
+.contact {
+  width: 280px;
+  height: 62px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.feedback-container__platform {
+  background-color: rgb(242, 242, 242);
+}
+
+.feedback-container__comment {
+  padding: 0;
+  margin: 0;
+}
+
+.user-comment {
+  margin: 0 16px;
+  width: 280px;
+  min-height: 200px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.feedback-container__end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .text {
+    width: 485px;
+  }
+
+  .feedback-container__list li:nth-child(2) .text {
+    width: 524px;
+  }
+
+  fieldset:not(.feedback-container__user-name) {
+    border: 2px solid rgb(242, 242, 242);
+  }
+
+  .feedback-container__platform {
+    background-color: @color-white;
+    height: 297px;
+  }
+
+  .feedback-container__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback-container__left {
+    order: -3;
+  }
+
+  .feedback-container__right {
+    order: -2;
+  }
+
+  .feedback-container__user-contacts {
+    order: -1;
+  }
+
+  .feedback-container__achievement {
+    background-color: transparent;
+  }
+
+  .feedback-container__user-contacts > legend {
+    display: block;
+  }
+
+  .feedback-container__field span {
+    display: none;
+  }
+
+  .feedback-container__end {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 69px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback-container__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .text {
+    width: 340px;
+  }
+
+  .feedback-container__list li:nth-child(2) .text {
+    width: 376px;
+  }
+
+  .feedback-container__platform {
+    width: 435px;
+  }
+
+  .feedback-container__user-contacts,
+  .feedback-container__achievement,
+  .feedback-container__comment {
+    width: 100%;
+  }
+
+  .feedback-container__field span {
+    display: inline;
+  }
+
+  .feedback-container__end {
+    width: 960px;
+    margin-top: 66px;
+  }
 }

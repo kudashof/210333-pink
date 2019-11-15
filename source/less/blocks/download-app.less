@@ -1,3 +1,12 @@
+.download-app {
+  background-color: @color-dark-blue;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 730px;
+}
+
 .download-app__wrapper {
   background-color: #1d2631;
   min-height: 212px;
@@ -6,6 +15,7 @@
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 15px;
+  margin-top: -6px;
 }
 
 .download-app__wrapper-list {
@@ -23,6 +33,10 @@
   margin-left: auto;
   margin-bottom: 15px;
   padding: 0;
+}
+
+.download-app__right {
+  margin-top: 170px;
 }
 
 .download-app__platform-icon {
@@ -53,11 +67,42 @@
   display: none;
 }
 
+@media (max-width: 660px) {
+  .download-app .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .download-app {
+    background-color: @color-dark-blue;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 458px;
+  }
+
+  .download-app .container {
+    display: flex;
+  }
+
+  .download-app__right {
+    background-color: transparent;
+    align-self: flex-end;
+    width: 50%;
+    margin-left: -15%;
+    z-index: 0;
+  }
+
+  .download-app__left {
+    width: 50%;
+    z-index: 1;
+  }
+
   .download-app__wrapper {
     display: flex;
     flex-direction: column;
-    position: absolute;
     max-width: 300px;
     z-index: 1;
     background-color: transparent;

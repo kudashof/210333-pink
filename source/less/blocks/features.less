@@ -12,28 +12,27 @@
   padding: 0;
   height: 785px;
 
-  //&::before {
-  //  content: "";
-  //  position: absolute;
-  //  background: url("../img/bg-triangle-white.svg") no-repeat center;
-  //  width: 100%;
-  //  height: 69px;
-  //  margin-top: -18px;
-  //}
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   background: url("../img/bg-triangle-white.svg") no-repeat center;
+  //   width: 100%;
+  //   height: 69px;
+  //   margin-top: -18px;
+  // }
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 157px;
-    height: 277px;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-49.2%);
-    background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
-    background-size: 157px auto;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 157px;
+  //   height: 277px;
+  //   bottom: 0;
+  //   left: 50%;
+  //   transform: translateX(-49.2%);
+  //   background: url("../img/iphone-screen-mobile@1x.png") no-repeat;
+  //   background-size: 157px auto;
+  // }
 }
-
 .features__title {
   height: 176px;
   background-color: @color-white;
@@ -54,7 +53,6 @@
 
 .features__item {
   flex-basis: auto;
-  width: 100%;
   margin-bottom: 5px;
 }
 
@@ -67,7 +65,6 @@
 }
 
 .features__item-description {
-  width: 261px;
   color: @color-dark-blue;
   font-size: @font-size-normal;
   font-weight: 400;
@@ -78,9 +75,16 @@
   display: flex;
   flex-direction: column;
   margin-top: 63px;
+  width: 270px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
+  .features__wrapper .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .features__title {
     display: flex;
     flex-direction: column;
@@ -89,18 +93,16 @@
 
   .features__title h2 {
     font-size: 40px;
-    width: 587px;
   }
 
   .features__title h2:last-child {
-    width: 350px;
-    margin-top: -21px;
+    margin: -21px 100px 0;
     line-height: 1.2;
   }
 
   .features__wrapper {
     height: 487px;
-    margin-left: 150px;
+    margin: 0;
 
     &:after {
       left: 0;
@@ -114,12 +116,10 @@
 }
 
 @media (min-width: @desktop-width) {
-  .features__wrapper {
-    width: 880px;
-  }
-
   .features__wrapper--wrap {
     flex-direction: row;
+    justify-content: space-around;
+    width: 960px;
   }
 
   .features__item-title {
@@ -127,6 +127,10 @@
     text-align: center;
     font-size: 30px;
     line-height: 1;
+  }
+
+  .features__title h2:last-child {
+    margin: -21px 200px 0;
   }
 
   .features__item-description {
