@@ -37,3 +37,26 @@ img {
 li {
   list-style-type: none;
 }
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: auto;
+  }
+}

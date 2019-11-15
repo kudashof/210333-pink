@@ -1,0 +1,48 @@
+@media (max-width: 660px) {
+  .diagram {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .diagram {
+    display: flex;
+    justify-content: flex-end;
+    height: 335px;
+    width: auto;
+    padding: 0 20px;
+
+    &__wrapper {
+      display: block;
+      position: absolute;
+      margin-top: 43px;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    &__description {
+      color: @color-dark-blue;
+      width: 296px;
+    }
+
+    &__link {
+      color: @color-pink;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .diagram {
+    width: 960px;
+
+  }
+
+  &__description {
+    font-size: @font-size-big;
+    width: 525px;
+  }
+}
