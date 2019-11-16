@@ -4,8 +4,14 @@
 
 .user-posts__wrapper {
   background-color: rgb(242, 242, 242);
-  margin: 0 20px;
+  margin: -5px 20px 19px;
+  padding: 17px 0 21px 17px;
 }
+
+.user-posts__wrapper--wrap {
+  margin-bottom: 20px;
+}
+
 .user-posts__photo {
   margin: 0 20px;
 }
@@ -15,7 +21,8 @@
 }
 
 .user-posts__comment {
-  margin: 15px 20px;
+  margin-bottom: 8px;
+  margin-top: 0;
 }
 
 .user-posts__time {
@@ -23,8 +30,10 @@
 }
 
 .user-posts__like-сounter {
+  font-size: 12px;
   color: @color-pink;
   text-transform: uppercase;
+  margin-left: 16px;
 }
 
 .user-posts__like {
@@ -33,18 +42,128 @@
 }
 
 @media (min-width: @tablet-width) {
+  .posts-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .user-posts--start {
-    margin: 0 auto;
+    margin: 76px auto 0;
     width: 100%;
+  }
+
+  .user-posts--start img {
+    height: 509px;
+  }
+
+  .user-posts--start .user-posts__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px 0 50px 0;
+    padding: 23px 21px 18px 27px;
+  }
+
+  .user-posts--start .user-posts__author {
+    order: 1;
+  }
+
+  .user-posts--start .user-posts__time {
+    order: 2;
+    margin-left: 3px;
+  }
+
+  .user-posts--start .user-posts__comment {
+    order: 5;
+    margin-bottom: 8px;
+  }
+
+  .user-posts--start .user-posts__like {
+    order: 4;
+    margin-left: 17px;
+    margin-top: 6px;
+  }
+
+  .user-posts--start .user-posts__like-сounter {
+    order: 3;
+    margin-left: 307px;
   }
 
   .user-posts:not(.user-posts--start) {
     width: 300px;
   }
 
-  .page-main__container {
+  .user-posts__photo img {
+    height: 300px;
+  }
+
+  .user-posts__wrapper--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 265px;
+    height: 113px;
+    margin: -4px 0 22px 0;
+    padding: 20px 8px 18px 28px;
+  }
+
+  .user-posts__like-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 260px;
+    margin: 0 24px 5px -17px;
+  }
+
+  .user-posts__like {
+    order: 2;
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+
+  .user-posts__like-сounter {
+    order: 1;
+  }
+
+  .user-posts__time {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .user-posts__comment {
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .posts-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .user-posts--start img {
+    height: 506px;
+  }
+
+  .user-posts--start .user-posts__wrapper {
+    padding-left: 28px;
+    margin-right: 13px;
+    margin-left: 9px;
+  }
+
+  .user-posts--start .user-posts__like-сounter {
+    margin-left: 624px;
+  }
+
+  .user-posts__photo img {
+    height: 399px;
+  }
+
+  .user-posts__wrapper--wrap {
+    width: initial;
+    margin: 0 0 57px;
+    padding: 16px 8px 18px 27px;
   }
 }

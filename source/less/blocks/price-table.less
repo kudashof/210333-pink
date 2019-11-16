@@ -1,25 +1,19 @@
-.price {
-  overflow: hidden;
-}
-
 .price-table {
   position: relative;
-  left: 50%;
-  width: 1099px;
-  margin-top: 127px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 31px;
+  left: 45%;
+  width: 1135px;
+  margin: 127px auto 31px auto;
   border-collapse: collapse;
   transform: translateX(-62%);
 }
 
 .price-table__header {
   width: 238px;
-  height: 98px;
+  height: 87px;
   color: @color-white;
   background-color: @color-dark-blue;
   border: 2px solid @color-white;
+  padding: 7px 0 0 4px;
 }
 
 .price-table__header-title {
@@ -31,13 +25,13 @@
 .price-table__header-price {
   font-size: @font-size-bigger;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 1.5;
 }
 
 .price-table__item {
   font-size: @font-size-big;
   color: @color-dark-blue;
-  padding-left: 26px;
+  padding-left: 21px;
 }
 
 .price-table__item-title {
@@ -48,18 +42,19 @@
 
 td {
   width: 235px;
-  height: 56px;
+  height: 59px;
   background-color: @color-white;
 }
 
-tr:not(:first-child), td {
+tr:not(:first-child),
+td {
   border: 2px solid #e5e5e5;
 }
 
 @media (min-width: 320px) {
   .price-table__header {
-    width: 277px;
-    height: 99px;
+    width: 210px;
+    height: 85px;
   }
 }
 
@@ -68,32 +63,77 @@ tr:not(:first-child), td {
     width: 100%;
     transform: none;
     position: static;
+    margin-top: 103px;
   }
 
-  tr {
-    width: 154px;
+  td {
+    width: 140px;
+    height: 44px;
+  }
+
+  .price-table__item {
+    text-transform: none;
+    font-size: 13px;
+    padding-left: 16px;
+    letter-spacing: 0.6px;
   }
 
   .price-table__item-title {
     display: none;
   }
 
-  .price-table__item {
-    font-size: @font-size-big;
-    color: @color-dark-blue;
-    padding-left: 26px;
-    text-transform: uppercase;
+  .price-table__header {
+    width: 154px;
+    height: 72px;
+    padding-top: 5px;
   }
 
-  .price-table__item {
-    text-transform: none;
+  .price-table__header-price {
+    font-size: @font-size-big;
+    margin-left: -4px;
+  }
+
+  .price-table__header-title {
+    font-size: @font-size-medium;
+  }
+
+  .price-table:last-child .price-table__item-title {
+    padding-top: -1px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .price-table {
-    width: 90%;
+    width: 950px;
     transform: none;
     position: static;
+
+    &__header {
+      width: 144px;
+      height: 98px;
+      padding-top: 0;
+    }
+
+    &__header-title {
+      font-size: @font-size-big;
+    }
+
+    &__header-price {
+      font-size: 23px;
+    }
+
+    &__item {
+      padding-left: 35px;
+      font-size: @font-size-big;
+      letter-spacing: normal;
+    }
+  }
+
+  tr {
+    height: 60px;
+  }
+
+  td {
+    width: 50px;
   }
 }

@@ -1,8 +1,7 @@
 .main-nav {
-  display: none;
-  position: absolute;
-  min-width: 320px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: -70px;
 }
 
 .main-nav__item {
@@ -43,10 +42,87 @@
   background-color: rgb(40, 54, 69);
 }
 
+.main-nav__toggle {
+  display: block;
+  align-self: flex-end;
+  width: 112px;
+  height: 70px;
+  padding-right: 35px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 52px;
+  height: 26px;
+  background: url("../img/icon-menu-burger.svg") no-repeat;
+
+
+  &:hover,
+  &:active {
+    background-color: @color-pink;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 4px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.main-nav--closed .main-nav__item {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     width: auto;
     margin: 0;
+    margin-top: -69px;
+  }
+
+  .main-nav__toggle {
+    padding-left: 45px;
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    top: 43px;
   }
 }
 
@@ -56,17 +132,21 @@
     position: static;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin-top: -2px;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 
   .main-nav__site-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 625px;
-    margin-top: -85px;
-    margin-left: 130px;
+    min-width: 622px;
     background-color: transparent;
+    margin-right: 2px;
+    margin-top: 26px;
   }
 
   .main-nav__item,
@@ -77,6 +157,10 @@
 
   .main-nav__item {
     text-transform: none;
-    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  .main-nav__item a {
+    font-weight: 300;
   }
 }

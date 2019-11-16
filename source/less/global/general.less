@@ -37,3 +37,31 @@ img {
 li {
   list-style-type: none;
 }
+
+fieldset {
+  border: 0 none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .container {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 960px;
+  }
+}

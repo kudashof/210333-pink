@@ -1,6 +1,44 @@
 .price {
-  height: 509px;
+  overflow: hidden;
+  height: 505px;
   background: url("../img/bg-triangle-white.svg") no-repeat;
   background-size: 835px;
   background-color: rgb(242, 242, 242);
+}
+
+.price__toggle {
+  .slider();
+}
+
+.price__toggles {
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 132px 6px;
+}
+
+.price__toggle--active {
+  .slider--active();
+  box-sizing: initial;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    height: 391px;
+  }
+
+  .price__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    height: 526px;
+    background-size: 1200px;
+    margin-top: 148px;
+
+    &__wrapper {
+      margin-top: 149px;
+    }
+  }
 }

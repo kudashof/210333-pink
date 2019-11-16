@@ -1,5 +1,6 @@
 .editor {
   background-color: rgb(242, 242, 242);
+  height: 757px;
 }
 
 .editor__image {
@@ -10,18 +11,109 @@
   margin: 0 20px;
 }
 
+.editor-filters__filter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin-top: 35px;
+  margin-left: 17px;
+}
+
+.editor-filters__filter:first-child svg {
+  margin-left: 2px;
+}
+
+.editor-filters__filter:nth-child(2) svg {
+  margin-left: 12px;
+}
+
 @media (min-width: @tablet-width) {
+  .editor {
+    height: 510px;
+  }
+
   .editor__wrapper {
     display: flex;
+    padding: 39px 0 0 0;
   }
 
   .editor-filters {
     display: flex;
     flex-direction: column;
     width: 50%;
+    margin-left: 28px;
   }
 
   .editor__image {
     width: 50%;
+    margin: 18px 4px 0 0;
+  }
+
+  .editor-filters__filter {
+    flex-direction: column;
+    margin-top: 16px;
+    margin-left: 29px;
+  }
+
+  .editor-filters__filter-name svg {
+    width: 23px;
+  }
+
+  .editor-filters__filter-name:nth-child(3) svg {
+    width: 17px;
+    margin-left: 7px;
+    margin-top: 2px;
+  }
+
+  .editor-filters__filter-name {
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .editor__button {
+    margin: 24px -3px 0 16px;
+  }
+
+  .editor__button--post {
+    padding: 13px 6px 14px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor__image {
+    width: 31%;
+    margin: 19px 20px 0 101px;
+  }
+
+  .editor-filters {
+    margin-left: 18px;
+  }
+
+  .editor-filters__filter {
+    margin-left: 38px;
+  }
+
+  .editor-filters__filter-name svg {
+    width: 48px;
+  }
+
+  .editor-filters__filter-name:nth-child(3) svg {
+    width: 38px;
+  }
+
+  .editor__button {
+    display: flex;
+    margin-top: 63px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+
+  .editor__button--post {
+    padding: 13px 36px 14px 42px;
+  }
+
+  .editor__button--cancel {
+    padding: 13px 48px 14px 57px;
   }
 }

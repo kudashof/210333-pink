@@ -2,16 +2,16 @@
   background-color: @color-dark-blue;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  height: 730px;
+  background-position: 2px -67px;
+  background-size: 320px;
+  height: 667px;
 }
 
 .download-app__wrapper {
   background-color: #1d2631;
   min-height: 212px;
   text-align: center;
-  padding-top: 31px;
+  padding-top: 30px;
   padding-right: 20px;
   padding-left: 20px;
   padding-bottom: 15px;
@@ -31,12 +31,12 @@
   margin-top: 0;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 15px;
+  margin-bottom: -1px;
   padding: 0;
 }
 
 .download-app__right {
-  margin-top: 170px;
+  margin-top: 109px;
 }
 
 .download-app__platform-icon {
@@ -67,15 +67,14 @@
   display: none;
 }
 
-@media (max-width: 660px) {
-  .download-app .container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+.download-app .container {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 @media (min-width: @tablet-width) {
   .download-app {
+    height: 618px;
     background-color: @color-dark-blue;
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
@@ -85,6 +84,7 @@
 
   .download-app .container {
     display: flex;
+    flex-direction: row;
   }
 
   .download-app__right {
@@ -115,15 +115,56 @@
     color: @color-white;
     font-size: 40px;
     font-weight: 300;
-    margin-top: 66px;
-    margin-left: 58px;
+    margin-top: 68px;
+    margin-left: 35px;
     line-height: 1.2;
+  }
+
+  .download-app__button {
+    width: 301px;
+    margin: -7px -20px 34px;
+  }
+
+  .download-app__list {
+    margin-left: 21px;
+  }
+
+  .download-app__description {
+    font-size: @font-size-big;
+    margin: 31px -21px;
+    width: 300px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .download-app {
+    height: 743px;
+  }
+
   .download-app__wrapper {
-    margin-left: 130px;
     padding-left: 0;
+  }
+
+  .download-app__text {
+    width: 269px;
+    font-size: 52px;
+    margin-top: 82px;
+    margin-left: 33px;
+    letter-spacing: -1px;
+    line-height: 61px;
+  }
+
+  .download-app__button {
+    margin: 0 18px 54px;
+    padding: 13px 16px 16px;
+    font-size: 21px;
+  }
+
+  .download-app__list {
+    margin-left: 59px;
+  }
+
+  .download-app__description {
+    margin: 50px 18px;
   }
 }
