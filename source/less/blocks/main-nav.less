@@ -1,7 +1,10 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  margin-top: -70px;
+}
+
+.main-nav__wrapper {
+  position: relative;
 }
 
 .main-nav__item {
@@ -36,27 +39,39 @@
 }
 
 .main-nav__site-list {
-  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 12px 0 0 0;
   padding: 0;
   text-align: center;
   background-color: rgb(40, 54, 69);
+  z-index: 2;
+}
+
+.main-nav__site-list--hidden {
+  display: none;
 }
 
 .main-nav__toggle {
   display: block;
   align-self: flex-end;
   width: 112px;
-  height: 70px;
   padding-right: 35px;
   cursor: pointer;
   border: none;
   background-color: transparent;
 }
 
+.main-nav__toggle--hidden {
+  display: none;
+}
+
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 24px;
   width: 52px;
   height: 26px;
   background: url("../img/icon-menu-burger.svg") no-repeat;
@@ -75,6 +90,7 @@
     position: absolute;
     width: 36px;
     height: 4px;
+    margin-top: -23px;
     background-color: #ffffff;
   }
 
@@ -93,8 +109,8 @@
   }
 }
 
-.main-nav--closed .main-nav__item {
-  display: none;
+.main-nav--nojs .main-nav__site-list {
+  position: static;
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -114,11 +130,14 @@
   .main-nav {
     width: auto;
     margin: 0;
-    margin-top: -69px;
+  }
+
+  .main-nav__site-list {
+    margin-top: 33px;
   }
 
   .main-nav__toggle {
-    padding-left: 45px;
+    padding-left: 6px;
   }
 
   .main-nav--closed .main-nav__toggle::before {
@@ -135,6 +154,32 @@
     margin-top: -2px;
   }
 
+  .main-nav a:hover {
+    color: @color-white;
+  }
+
+  .main-nav__item {
+    border: 3px solid transparent;
+    text-transform: none;
+    letter-spacing: 0.4px;
+
+    &:first-child {
+      border-top: transparent;
+    }
+
+    &:last-child {
+      border-bottom: 3px solid transparent;
+    }
+  }
+
+  .main-nav__item:hover {
+    border-bottom: 3px solid @color-white;
+  }
+
+  .main-nav__item:last-child:hover {
+    border-bottom: 3px solid @color-white;
+  }
+
   .main-nav__toggle {
     display: none;
   }
@@ -145,19 +190,8 @@
     align-items: center;
     min-width: 622px;
     background-color: transparent;
-    margin-right: 2px;
     margin-top: 26px;
-  }
-
-  .main-nav__item,
-  .main-nav__item:first-child,
-  .main-nav__item:last-child {
-    border: none;
-  }
-
-  .main-nav__item {
-    text-transform: none;
-    letter-spacing: 0.4px;
+    margin-left: 172px;
   }
 
   .main-nav__item a {

@@ -1,10 +1,11 @@
 .editor {
   background-color: rgb(242, 242, 242);
   height: 757px;
+  padding-top: 20px;
 }
 
-.editor__image {
-  margin: 20px 20px 0 20px;
+.editor__wrapper {
+  text-align: center;
 }
 
 .editor-filters {
@@ -30,7 +31,7 @@
 
 @media (min-width: @tablet-width) {
   .editor {
-    height: 510px;
+    height: 488px;
   }
 
   .editor__wrapper {
@@ -42,18 +43,17 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin-left: 28px;
+    margin: 0;
   }
 
   .editor__image {
-    width: 50%;
-    margin: 18px 4px 0 0;
+    margin-top: -3px;
   }
 
   .editor-filters__filter {
     flex-direction: column;
-    margin-top: 16px;
-    margin-left: 29px;
+    margin-top: -9px;
+    margin-left: 44px;
   }
 
   .editor-filters__filter-name svg {
@@ -72,18 +72,25 @@
   }
 
   .editor__button {
-    margin: 24px -3px 0 16px;
+    margin: 24px 2px 0 23px;
   }
 
   .editor__button--post {
-    padding: 13px 6px 14px 0;
+    padding: 11px 16px 14px 11px;
+  }
+
+  .editor__button--cancel {
+    padding-left: 91px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .editor__wrapper {
+    padding-top: 19px;
+  }
+
   .editor__image {
-    width: 31%;
-    margin: 19px 20px 0 101px;
+    margin: 19px 28px 0 91px;
   }
 
   .editor-filters {
@@ -92,6 +99,7 @@
 
   .editor-filters__filter {
     margin-left: 38px;
+    margin-top: 15px;
   }
 
   .editor-filters__filter-name svg {
@@ -104,13 +112,12 @@
 
   .editor__button {
     display: flex;
-    margin-top: 63px;
-    margin-left: 22px;
-    margin-right: 22px;
+    flex-direction: row;
+    margin: 62px 26px 0 22px;
   }
 
   .editor__button--post {
-    padding: 13px 36px 14px 42px;
+    padding: 11px 36px 14px 42px;
   }
 
   .editor__button--cancel {
