@@ -25,25 +25,24 @@
 }
 
 .social__item:active {
+  opacity: 0.9;
   border: 2px solid rgb(233, 235, 236);
   border-radius: 50%;
 }
 
-.social__link svg {
-  width: 45px;
+.social__icon {
   margin-top: 15px;
+  margin-left: 15px;
+  fill: @color-pink;
 }
 
-.social__link svg:active {
-  color: rgb(241, 190, 204);
-}
-
-.social__link--facebook svg {
+.social__icon--facebook {
   margin-top: 11px;
+  margin-left: 19px;
 }
 
-.social__link--youtube {
-  margin-left: 1px;
+.social__icon--youtube {
+  margin-left: 17px;
 }
 
 @media (min-width: @tablet-width) {
