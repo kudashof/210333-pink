@@ -48,7 +48,7 @@
   display: none;
 }
 
-.reviews__button {
+.reviews__btns {
   display: none;
 }
 
@@ -68,6 +68,7 @@
   .slider--active();
   box-sizing: initial;
   margin-left: -6px;
+  margin-top: -2px;
 }
 
 .reviews__toggles {
@@ -129,7 +130,8 @@
       width: 81px;
       height: 71px;
       margin-top: -98px;
-      left: 47%;
+      left: 48%;
+      opacity: 0.1;
     }
 
     &__text {
@@ -149,38 +151,55 @@
       margin: 0 0 0 1px;
     }
 
-    &__button {
-      display: block;
-      position: absolute;
-      top: 41px;
-      width: 22px;
-      border: 0;
-      padding: 0;
-      height: 41px;
-      background-color: transparent;
-      background-size: 22px 41px;
-      overflow: hidden;
-      cursor: pointer;
-      outline: 0;
-    }
-
-    &__button--left {
-      background: url("../img/icon-review-arrow-left.svg") no-repeat;
-      width: 22px;
-      height: 41px;
-      margin-left: -159px;
-    }
-
-    &__button--right {
-      background: url("../img/icon-review-arrow-right.svg") no-repeat;
-      width: 22px;
-      height: 41px;
-      right: 0;
-      margin-right: 271px;
-    }
-
     &__toggles {
       display: none;
+    }
+  }
+
+  .reviews__btns {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    height: 50px;
+    margin-left: -161px;
+    margin-top: -148px;
+  }
+
+  .reviews__btn--left {
+    background: url("../img/icon-review-arrow-left.svg") no-repeat;
+    width: 22px;
+    height: 41px;
+    border: 0;
+    opacity: 0.3;
+    overflow: hidden;
+    cursor: pointer;
+    outline: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  .reviews__btn--right {
+    background: url("../img/icon-review-arrow-right.svg") no-repeat;
+    width: 22px;
+    height: 41px;
+    border: 0;
+    opacity: 0.3;
+    overflow: hidden;
+    cursor: pointer;
+    outline: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
     }
   }
 }

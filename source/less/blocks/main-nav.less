@@ -43,7 +43,7 @@
   left: 0;
   right: 0;
   top: 0;
-  margin: 12px 0 0 0;
+  margin: 43px 0 0 0;
   padding: 0;
   text-align: center;
   background-color: rgb(40, 54, 69);
@@ -57,24 +57,32 @@
 .main-nav__toggle {
   display: block;
   align-self: flex-end;
-  width: 112px;
-  padding-right: 35px;
+  padding-right: 20px;
+  margin-top: -31px;
   cursor: pointer;
   border: none;
+  outline: none;
   background-color: transparent;
+}
+
+.main-nav__toggle-btn--hidden {
+  display: none;
+}
+
+.main-nav__toggle-btn {
+  fill: @color-white;
+}
+
+.main-nav__toggle-btn:hover {
+  fill: @color-pink;
+}
+
+.main-nav__toggle-btn:active {
+  opacity: 0.3;
 }
 
 .main-nav__toggle--hidden {
   display: none;
-}
-
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 24px;
-  width: 52px;
-  height: 26px;
-  background: url("../img/icon-menu-burger.svg") no-repeat;
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -84,8 +92,9 @@
     position: absolute;
     width: 36px;
     height: 4px;
-    margin-top: -23px;
-    background-color: #ffffff;
+    right: 20px;
+    top: 32px;
+    background-color: @color-white;
   }
 
   &::before {
@@ -97,9 +106,14 @@
     transform: rotate(-45deg);
   }
 
+  &:hover::before,
+  &:hover::after {
+    background-color: @color-pink;
+  }
+
   &:active::before,
   &:active::after {
-    background-color: rgb(255, 255, 255);
+    opacity: 0.3;
   }
 }
 
@@ -127,7 +141,7 @@
   }
 
   .main-nav__site-list {
-    margin-top: 33px;
+    margin-top: 63px;
   }
 
   .main-nav__toggle {
@@ -136,6 +150,12 @@
 
   .main-nav--closed .main-nav__toggle::before {
     top: 43px;
+  }
+
+  .main-nav--opened .main-nav__toggle::before,
+  .main-nav--opened .main-nav__toggle::after {
+    right: 37px;
+    top: 53px;
   }
 }
 
@@ -172,6 +192,10 @@
 
   .main-nav__item:last-child:hover {
     border-bottom: 3px solid @color-white;
+  }
+
+  .main-nav__item:active {
+    opacity: 0.3;
   }
 
   .main-nav__toggle {

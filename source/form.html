@@ -21,6 +21,9 @@
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle main-nav__toggle--hidden" type="button">
+            <svg class="main-nav__toggle-btn" width="49.945px" height="24.007px">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
@@ -126,18 +129,15 @@
                   <ul class="feedback-container__list">
                     <li class="feedback-container__list-item">
                       <input class="radio" type="radio" name="app" id="ios" value="ios" checked>
-                      <span class="radio-custom"></span>
-                      <label class="description" for="ios">Pink для iOS</label>
+                      <label class="description-radio" for="ios">Pink для iOS</label>
                     </li>
                     <li class="feedback-container__list-item">
                       <input class="radio" type="radio" name="app" id="android" value="android">
-                      <span class="radio-custom"></span>
-                      <label class="description" for="android">Pink на Android</label>
+                      <label class="description-radio" for="android">Pink на Android</label>
                     </li>
                     <li class="feedback-container__list-item">
                       <input class="radio" type="radio" name="app" id="windows" value="windows">
-                      <span class="radio-custom"></span>
-                      <label class="description" for="windows">Windows Phone</label>
+                      <label class="description-radio" for="windows">Windows Phone</label>
                     </li>
                   </ul>
                 </div>
@@ -162,7 +162,7 @@
 
     <footer class="page-footer">
       <div class="container">
-        <div class="page-footer__wrapper">
+        <div class="page-footer__wrapper page-footer__wrapper--form">
           <a class="page-footer__logo" href="index.html">
             <picture>
               <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
@@ -174,7 +174,7 @@
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--twitter" href="#">
-                  <svg class="social__icon social__icon--twitter"width="17.5px" height="14.663px">
+                  <svg class="social__icon social__icon--twitter" width="17.5px" height="14.663px">
                     <use xlink:href="img/sprite.svg#icon-twitter"></use>
                   </svg>
                   <span class="visually-hidden">Мы в Твиттере</span>

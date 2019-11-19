@@ -20,7 +20,10 @@
           <h1 class="visually-hidden">Пинк - это мобильное приложение для раскрашивания серых будней в розовый цвет.</h1>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle main-nav__toggle--hidden" type="button">
+          <button class="main-nav__toggle" type="button">
+            <svg class="main-nav__toggle-btn" width="49.945px" height="24.007px">
+              <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+            </svg>
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
@@ -79,6 +82,10 @@
           </div>
           <div class="download-app__right">
             <picture>
+              <source media="(min-width: 960px)" type="image/webp" srcset="img/webp/iphone-hand-desktop@1x.webp 1x, img/webp/iphone-hand-desktop@2x.webp 2x">
+              <source media="(min-width: 660px)" type="image/webp"  srcset="img/webp/iphone-hand-tablet@1x.webp 1x, img/webp/iphone-hand-tablet@2x.webp 2x">
+              <source type="image/webp" src="img/webp/iphone-hand-mobile@1x.webp, img/webp/iphone-hand-mobile@2x.webp 2x">
+
               <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
               <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
               <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Приложение Пинк">
@@ -117,7 +124,18 @@
       <section class="diagram">
         <div class="container">
           <div class="diagram__left">
-            <img src="img/icon-timer.svg" alt="Таймер">
+            <svg class="diagram__timer diagram__timer--tablet" width="298px" height="345.097px">
+              <use xlink:href="img/sprite.svg#icon-timer"></use>
+            </svg>
+            <svg class="diagram__timer diagram__timer--desktop" width="298px" height="345.097px">
+              <use xlink:href="img/sprite.svg#icon-timer-desktop"></use>
+            </svg>
+            <svg class="diagram__diagram-fill diagram__diagram-fill--tablet" width="200px" height="253px">
+              <use xlink:href="img/sprite.svg#icon-diagram-fill"></use>
+            </svg>
+            <svg class="diagram__diagram-fill diagram__diagram-fill--desktop" width="300px" height="253px">
+              <use xlink:href="img/sprite.svg#icon-diagram-fill-desktop"></use>
+            </svg>
           </div>
           <div class="diagram__right">
             <h2 class="diagram__title">
@@ -150,8 +168,10 @@
                 <p class="reviews__text">&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
               </blockquote>
             </div>
-            <button class="reviews__button reviews__button--left" type="button"></button>
-            <button class="reviews__button reviews__button--right" type="button"></button>
+            <p class="reviews__btns">
+              <button class="reviews__btn reviews__btn--left" type="button"></button>
+              <button class="reviews__btn reviews__btn--right" type="button"></button>
+            </p>
             <p class="reviews__toggles">
               <button class="reviews__toggle reviews__toggle--active" type="button"><span class="visually-hidden">1</span></button>
               <button class="reviews__toggle" type="button"><span class="visually-hidden">2</span></button>
@@ -172,6 +192,7 @@
                   <span class="price-table__header-price">1,99 USD</span>
                 </th>
                 <th class="price-table__header price-table__header--hit">
+                  <span class="price-table__header-hit">Хит</span>
                   <span class="price-table__header-title">Стандарт</span><br>
                   <span class="price-table__header-price">3,99 USD</span>
                 </th>
@@ -185,17 +206,23 @@
                 <td>
                   <span class="price-table__item-title">Розовый фильтр</span>
                   <span class="price-table__check visually-hidden">есть</span>
-                  <img class="price-table__check-yes" src="img/icon-yes.svg">
+                  <svg class="price-table__check-yes" width="21.698px" height="16.09px">
+                    <use xlink:href="img/sprite.svg#icon-yes"></use>
+                  </svg>
                 </td>
                 <td>
                   <span class="price-table__item-title">Розовый фильтр</span>
                   <span class="price-table__check visually-hidden">есть</span>
-                  <img class="price-table__check-yes" src="img/icon-yes.svg">
+                  <svg class="price-table__check-yes" width="21.698px" height="16.09px">
+                    <use xlink:href="img/sprite.svg#icon-yes"></use>
+                  </svg>
                 </td>
                 <td>
                   <span class="price-table__item-title">Розовый фильтр</span>
                   <span class="price-table__check visually-hidden">есть</span>
-                  <img class="price-table__check-yes" src="img/icon-yes.svg">
+                  <svg class="price-table__check-yes" width="21.698px" height="16.09px">
+                    <use xlink:href="img/sprite.svg#icon-yes"></use>
+                  </svg>
                 </td>
               </tr>
               <tr>
@@ -203,17 +230,23 @@
                 <td>
                   <span class="price-table__item-title">Смайлики</span>
                   <span class="price-table__check visually-hidden">нет</span>
-                  <img class="price-table__check-no" src="img/icon-no.svg">
+                  <svg class="price-table__check-no" width="26.752px" height="26.752px">
+                    <use xlink:href="img/sprite.svg#icon-no"></use>
+                  </svg>
                 </td>
                 <td>
                   <span class="price-table__item-title">Смайлики</span>
                   <span class="price-table__check price-table__check--yes visually-hidden">есть</span>
-                  <img class="price-table__check-yes" src="img/icon-yes.svg">
+                  <svg class="price-table__check-yes" width="21.698px" height="16.09px">
+                    <use xlink:href="img/sprite.svg#icon-yes"></use>
+                  </svg>
                 </td>
                 <td>
                   <span class="price-table__item-title">Смайлики</span>
                   <span class="price-table__check price-table__check--yes visually-hidden">есть</span>
-                  <img class="price-table__check-yes" src="img/icon-yes.svg">
+                  <svg class="price-table__check-yes" width="21.698px" height="16.09px">
+                    <use xlink:href="img/sprite.svg#icon-yes"></use>
+                  </svg>
                 </td>
               </tr>
               <tr>
@@ -221,17 +254,23 @@
                 <td>
                   <span class="price-table__item-title">Комментарии</span>
                   <span class="price-table__check visually-hidden">нет</span>
-                  <img class="price-table__check-no" src="img/icon-no.svg">
+                  <svg class="price-table__check-no" width="26.752px" height="26.752px">
+                    <use xlink:href="img/sprite.svg#icon-no"></use>
+                  </svg>
                 </td>
                 <td>
                   <span class="price-table__item-title">Комментарии</span>
                   <span class="price-table__check visually-hidden">нет</span>
-                  <img class="price-table__check-no" src="img/icon-no.svg">
+                  <svg class="price-table__check-no" width="26.752px" height="26.752px">
+                    <use xlink:href="img/sprite.svg#icon-no"></use>
+                  </svg>
                 </td>
                 <td>
                   <span class="price-table__item-title">Комментарии</span>
                   <span class="price-table__check visually-hidden">есть</span>
-                  <img class="price-table__check-yes" src="img/icon-yes.svg">
+                  <svg class="price-table__check-yes" width="21.698px" height="16.09px">
+                    <use xlink:href="img/sprite.svg#icon-yes"></use>
+                  </svg>
                 </td>
               </tr>
             </table>
@@ -266,7 +305,7 @@
           <div class="contacts__map">
             <div class="container">
               <div class="contacts__map-wrapper">
-                <div class="contacts__map-content" id="ya-map"></div>
+                <div class="contacts__map-content"></div>
               </div>
             </div>
           </div>
