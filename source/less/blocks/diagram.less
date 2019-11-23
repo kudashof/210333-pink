@@ -9,17 +9,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .diagram .container {
-    display: flex;
-    padding-top: 60px;
-  }
-
   .diagram {
-    display: flex;
-    justify-content: flex-end;
     height: 335px;
-    width: auto;
-    padding: 0 20px;
+
+    &__container {
+      display: flex;
+    }
 
     &__left {
       margin-top: -3px;
@@ -41,9 +36,11 @@
     & .diagram__diagram-fill {
       position: absolute;
       fill: @color-pink;
+      z-index: 1;
     }
 
     & .diagram__diagram-fill--tablet {
+      fill: @color-pink;
       margin-top: -323px;
       margin-left: 20px;
     }
@@ -123,6 +120,9 @@
     & .diagram__diagram-fill--desktop {
       display: block;
       margin-top: -277px;
+      margin-left: -51px;
+      fill: @color-pink;
+      z-index: 1;
     }
 
     &__right {
@@ -131,7 +131,7 @@
 
     &__left::before {
       font-size: 119px;
-      margin-left: 79px;
+      margin-left: 32px;
       margin-top: 177px;
     }
 
