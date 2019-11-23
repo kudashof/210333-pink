@@ -4,6 +4,7 @@ var siteList = document.querySelector('.main-nav__site-list');
 var pageHeader = document.querySelector('.page-header');
 var toggleBtn = document.querySelector('.main-nav__toggle-btn');
 
+
 navMain.classList.remove('main-nav--nojs');
 navToggle.classList.remove('main-nav__toggle--hidden');
 siteList.classList.add('main-nav__site-list--hidden');
@@ -25,3 +26,4 @@ navToggle.addEventListener('click', function() {
     toggleBtn.classList.remove('main-nav__toggle-btn--hidden');
   }
 });
+svg4everybody();
