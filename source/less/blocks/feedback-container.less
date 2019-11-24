@@ -7,6 +7,7 @@
 }
 
 .feedback-container__title {
+  font-size: @font-size-normal;
   font-weight: 400;
   line-height: 18px;
   color: @color-pink;
@@ -87,7 +88,9 @@ input::placeholder {
   padding: 37px 20px 0;
 
   & .feedback-container__title {
-    margin: 0 14px 40px 12px;
+    margin: 0 30px 40px 28px;
+    font-size: @font-size-normal;
+    line-height: 19px;
   }
 
   & .feedback-container__list {
@@ -108,8 +111,9 @@ input::placeholder {
   position: absolute;
   width: 35px;
   height: 35px;
-  margin-top: -3px;
-  margin-left: -69px;
+  left: 0;
+  margin-top: -6px;
+  margin-left: 19px;
   background-color: @color-white;
   border: 2px solid rgb(229, 229, 229);
 }
@@ -130,7 +134,9 @@ input[type="checkbox"]:checked + .description::after {
   content: "";
   display: block;
   position: absolute;
-  margin-left: -60px;
+  left: 0;
+  margin-left: 29px;
+  margin-top: -3px;
   width: 20px;
   height: 8px;
   transform: translateY(-214%) rotate(-45deg);
@@ -142,11 +148,12 @@ input[type="checkbox"]:checked + .description::after {
 
 .contact {
   width: 257px;
-  height: 59px;
+  height: 54px;
   border: 2px solid rgb(229, 229, 229);
   border-radius: 3px;
   margin-bottom: 10px;
   padding-left: 19px;
+  padding-top: 4px;
 }
 
 .feedback-container__platform {
@@ -154,7 +161,7 @@ input[type="checkbox"]:checked + .description::after {
   padding: 39px 20px 0;
 
   & .feedback-container__title {
-    margin: 0 21px 0 18px;
+    margin: 2px 20px 0 18px;
   }
 
   & .feedback-container__list {
@@ -170,7 +177,7 @@ input[type="checkbox"]:checked + .description::after {
   }
 
   & .feedback-container__list-item:last-child {
-    padding-bottom: 42px;
+    padding-bottom: 46px;
   }
 }
 
@@ -183,7 +190,8 @@ input[type="checkbox"]:checked + .description::after {
   position: absolute;
   width: 35px;
   height: 35px;
-  margin-left: -70px;
+  left: 0;
+  margin-left: 20px;
   margin-top: -5px;
   background-color: @color-white;
   border: 2px solid rgb(229, 229, 229);
@@ -204,7 +212,8 @@ input[type="radio"]:checked + .description-radio::after {
   position: absolute;
   width: 15px;
   height: 15px;
-  margin-left: -58px;
+  left: 0;
+  margin-left: 32px;
   transform: translateY(-151%);
   background-color: @color-pink;
   border-radius: 50%;
@@ -221,13 +230,13 @@ input[type="radio"]:checked + .description-radio::after {
   margin: 0;
 
   & .feedback-container__title {
-    margin-top: 43px;
+    margin-top: 38px;
     margin-left: -3px;
   }
 }
 
 .user-comment {
-  margin: 17px 18px 10px;
+  margin: 4px 18px 10px;
   width: 237px;
   border: 2px solid rgb(229, 229, 229);
   border-radius: 3px;
@@ -262,7 +271,7 @@ textarea::placeholder {
   }
 
   .text {
-    width: 500px;
+    width: 499px;
   }
 
   .feedback-container__list li:nth-child(2) .text {
@@ -278,7 +287,7 @@ textarea::placeholder {
     margin-top: 14px;
 
     & .feedback-container__title {
-      margin: -16px 124px 31px 66px;
+      margin: -15px 124px 31px 65px;
       background-color: @color-white;
     }
 
@@ -287,7 +296,7 @@ textarea::placeholder {
     }
 
     & .feedback-container__list-item {
-      padding-bottom: 38px;
+      padding-bottom: 40px;
     }
   }
 
@@ -310,16 +319,18 @@ textarea::placeholder {
   }
 
   .description-radio::before {
-    margin-left: -60px;
+    margin-left: 80px;
+    margin-top: -4px;
   }
 
   input[type="radio"]:checked + .description-radio::after {
-    margin-left: -48px;
+    margin-left: 91px;
+    margin-top: 1px;
   }
 
   .feedback-container__user-contacts {
     order: -1;
-    margin-top: 67px;
+    margin-top: 63px;
     border: 2px solid rgb(229, 229, 229);
 
     & h3 {
@@ -329,7 +340,8 @@ textarea::placeholder {
     }
 
     & .feedback-container__list {
-      padding: 23px 59px 39px;
+      padding: 0 59px 39px;
+      margin-top: -24px;
     }
 
     & .feedback-container__list-item {
@@ -353,28 +365,32 @@ textarea::placeholder {
 
     & .feedback-container__list-item--phone::after {
       content: "";
-      position: absolute;
+      position: relative;
       width: 63px;
-      height: 64px;
+      height: 63px;
       background: url("../img/icon-phone.svg") no-repeat;
       background-color: rgb(229, 229, 229);
-      background-size: 20px 61px;
-      background-position-x: 20px;
-      margin-top: -42px;
-      margin-left: 435px;
+      background-size: 27px 20px;
+      background-position: 16px 20px;
+      margin-left: 437px;
+      top: 63px;
     }
 
     & .feedback-container__list-item--email::after {
       content: "";
-      position: absolute;
+      position: relative;
       width: 63px;
-      height: 64px;
+      height: 63px;
       background: url("../img/icon-mail.svg") no-repeat;
       background-color: rgb(229, 229, 229);
-      background-size: 20px 61px;
-      background-position-x: 20px;
-      margin-top: -42px;
-      margin-left: 435px;
+      background-size: 20px 14px;
+      background-position: 20px 25px;
+      margin-left: 437px;
+      top: -2px;
+    }
+
+    & .feedback-container__list-item--email input {
+      margin-top: -64px;
     }
   }
 
@@ -404,6 +420,14 @@ textarea::placeholder {
     & .feedback-container__title {
       background-color: @color-white;
       margin: -46px 71px 0;
+    }
+
+    & .description::before {
+      margin-left: 79px;
+    }
+
+    & input[type="checkbox"]:checked + .description::after {
+      margin-left: 89px;
     }
   }
 
@@ -495,6 +519,20 @@ textarea::placeholder {
       padding-left: 73px;
       padding-top: 32px;
     }
+
+    & .feedback-container__list-item {
+      padding-bottom: 38px;
+    }
+
+    & .description-radio::before {
+      margin-left: 110px;
+      left: 50%;
+    }
+
+    & input[type="radio"]:checked + .description-radio::after {
+      margin-left: 122px;
+      left: 50%;
+    }
   }
 
   .description-radio {
@@ -507,7 +545,7 @@ textarea::placeholder {
     & .feedback-container__list {
       display: flex;
       justify-content: space-between;
-      padding: 20px 58px 0;
+      padding: 40px 58px 1px;
     }
 
     & .feedback-container__list-item:last-child {
@@ -516,11 +554,11 @@ textarea::placeholder {
 
     & .contact {
       width: 352px;
+      padding-left: 18px;
     }
 
     & .name {
-      margin-top: -5px;
-      margin-bottom: -7px;
+      margin: -6px 0 -6px 20px;
     }
 
     & h3 {
@@ -528,12 +566,24 @@ textarea::placeholder {
       margin-left: 338px;
     }
 
-    & .feedback-container__list-item--email::after,
+    & .feedback-container__list-item--email::after {
+      width: 59px;
+      height: 59px;
+      margin-top: -40px;
+      margin-left: 313px;
+      top: -3px;
+      background-size: 21px 14px;
+      background-position: 18px 22px;
+    }
+
     & .feedback-container__list-item--phone::after {
       width: 59px;
       height: 59px;
       margin-top: -40px;
-      margin-left: 312px;
+      margin-left: 313px;
+      top: 61px;
+      background-size: 27px 22px;
+      background-position: 18px 18px;
     }
   }
 
@@ -553,12 +603,22 @@ textarea::placeholder {
     }
 
     & .feedback-container__list-item {
-      padding-bottom: 47px;
+      padding-bottom: 45px;
     }
 
     & .description {
-      margin-left: 63px;
+      position: relative;
+      margin-left: 62px;
       margin-top: 7px;
+    }
+
+    & .description::before {
+      margin-left: -60px;
+    }
+
+    & input[type="checkbox"]:checked + .description::after {
+      margin-top: -2px;
+      margin-left: -52px;
     }
   }
 

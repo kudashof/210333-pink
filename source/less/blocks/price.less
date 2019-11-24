@@ -8,17 +8,20 @@
 
 .price__toggle {
   .slider();
+  cursor: pointer;
 }
 
 .price__toggles {
   display: flex;
   justify-content: space-between;
-  margin: 43px 132px 6px;
+  margin: 45px 132px 6px;
 }
 
 .price__toggle--active {
   .slider--active();
-  box-sizing: initial;
+  width: 12px;
+  height: 12px;
+  margin-left: -1px;
   margin-top: -3px;
 }
 
@@ -35,11 +38,11 @@
 @media (min-width: @desktop-width) {
   .price {
     height: 526px;
-    background-size: 1200px;
+    background-size: auto 125px;
     margin-top: 148px;
 
     &__wrapper {
-      margin-top: 154px;
+      margin-top: 149px;
     }
   }
 }

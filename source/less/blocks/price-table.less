@@ -2,7 +2,7 @@
   position: relative;
   left: 45%;
   width: 1135px;
-  margin: 127px auto 31px auto;
+  margin: 124px auto 31px auto;
   border-collapse: collapse;
   transform: translateX(-62%);
 }
@@ -90,7 +90,7 @@ td {
     width: 100%;
     transform: none;
     position: static;
-    margin-top: 102px;
+    margin-top: 104px;
   }
 
   td {
@@ -116,9 +116,13 @@ td {
     padding: 3px 0;
   }
 
-  .price-table__check-no {
-    margin-left: 64px;
+  .price-table__check-yes {
     margin-top: -29px;
+  }
+
+  .price-table__check-no {
+    margin-left: 62px;
+    margin-top: -31px;
   }
 
   .price-table__header-price {
@@ -174,8 +178,13 @@ td {
     }
 
     &__check-yes {
-      margin-top: -33px;
-      margin-left: 62px;
+      margin-top: -26px;
+      margin-left: 80px;
+    }
+
+    &__check-no {
+      margin-left: 80px;
+      margin-top: -31px;
     }
 
     & tr {
@@ -183,20 +192,19 @@ td {
     }
 
     & td {
-      width: 50px;
-      padding: 2px 39px 0;
+      padding: 2px 0 0 24px;
     }
 
     &__header--hit::before {
       left: 50%;
-      margin-top: -19px;
+      margin-top: -18px;
       background: url("../img/bg-hit-tablet.svg") no-repeat top left;
-      background-size: 74px 73px;
+      background-size: 72px 72px;
     }
 
     &__header-hit {
       left: 50%;
-      margin-left: 10px;
+      margin-left: 9px;
       font-size: 18px;
     }
   }

@@ -1,4 +1,4 @@
-@media (max-width: 660px) {
+@media (max-width: 559px) {
   .diagram {
     display: none;
 
@@ -10,7 +10,8 @@
 
 @media (min-width: @tablet-width) {
   .diagram {
-    height: 335px;
+    margin-top: 60px;
+    margin-bottom: -36px;
 
     &__container {
       display: flex;
@@ -25,8 +26,9 @@
     }
 
     & .diagram__timer--tablet {
-      width: 316px;
-      margin-left: -78px;
+      width: 238px;
+      margin-top: -36px;
+      margin-left: 2px;
     }
 
     & .diagram__timer--desktop {
@@ -40,8 +42,8 @@
     }
 
     & .diagram__diagram-fill--tablet {
-      fill: @color-pink;
-      margin-top: -323px;
+      position: relative;
+      top: -284px;
       margin-left: 20px;
     }
 
@@ -54,26 +56,21 @@
       position: absolute;
       font-size: 96px;
       color: @color-pink;
-      margin-left: 60px;
-      margin-top: 139px;
+      margin-left: 64px;
+      margin-top: 140px;
       font-weight: 700;
-    }
-
-    &__right {
-      margin-left: 71px;
     }
 
     &__title {
       font-size: 30px;
       line-height: 1.2;
-      margin: 33px 0 -4px -1px;
+      margin: 36px 0 -4px;
     }
 
     &__description {
       color: @color-dark-blue;
-      width: 305px;
-      margin-left: -1px;
-      margin-bottom: 11px;
+      width: 312px;
+      margin-bottom: 13px;
     }
 
     &__description br {
@@ -95,7 +92,7 @@
 
   .diagram {
     background-color: rgb(242, 242, 242);
-    margin: -29px 0;
+    margin: 0;
     height: 359px;
 
     &__left {
@@ -110,7 +107,7 @@
     & .diagram__timer--desktop {
       display: block;
       width: 398px;
-      margin-left: -100px;
+      margin-left: -48px;
     }
 
     & .diagram__diagram-fill--tablet {
@@ -120,18 +117,19 @@
     & .diagram__diagram-fill--desktop {
       display: block;
       margin-top: -277px;
-      margin-left: -51px;
+      margin-left: -1px;
       fill: @color-pink;
       z-index: 1;
     }
 
     &__right {
-      margin-right: 58px;
+      margin-left: 16px;
+      margin-top: 5px;
     }
 
     &__left::before {
       font-size: 119px;
-      margin-left: 32px;
+      margin-left: 79px;
       margin-top: 177px;
     }
 
@@ -150,7 +148,7 @@
     }
 
     &__title {
-      margin: 38px 0 25px -1px;
+      margin: 38px 0 22px -1px;
     }
 
     &__title br {
@@ -159,7 +157,7 @@
 
     &__link {
       font-size: @font-size-big;
-      line-height: 26px;
+      line-height: 30px;
     }
   }
 }
