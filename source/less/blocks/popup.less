@@ -1,17 +1,81 @@
 .popup {
   display: none;
+}
+
+.popup__error,
+.popup__confirmation {
   box-shadow: 0 0 45px -8px rgba(0, 0, 0, 0.5);
   height: 290px;
   width: 100%;
   text-align: center;
   padding-top: 10px;
+  background-color: @color-white;
 }
 
-.popup-description {
+.popup__error-description,
+.popup__confirmation-description {
   font-size: @font-size-normal;
   color: @color-dark-blue;
 }
 
-.popup-confirmation {
-  background-color: @color-white;
+.popup__button-form {
+  background-color: rgb(42, 171, 109);
+  width: 281px;
+  height: 64px;
+  border: none;
+  border-radius: 3px;
+  color: @color-white;
+  font-family: inherit;
+  font-size: @font-size-big;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .popup__error,
+  .popup__confirmation {
+    padding: 30px 0;
+    width: 360px;
+  }
+
+  .popup__title-confirmation,
+  .popup__title-error {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+    width: 300px;
+    margin-left: 159px;
+  }
+
+  .popup__error-description,
+  .popup__confirmation-description {
+    font-size: @font-size-big;
+    width: 349px;
+    margin-left: 140px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popup__error,
+  .popup__confirmation {
+    width: 780px;
+    height: 350px;
+    margin-left: 110px;
+  }
+
+  .popup__title-confirmation,
+  .popup__title-error {
+    width: 462px;
+    margin-left: 148px;
+    margin-bottom: 71px;
+  }
+
+  .popup__error-description,
+  .popup__confirmation-description {
+    font-size: 20px;
+    width: 414px;
+    margin-left: 177px;
+  }
 }

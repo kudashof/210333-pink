@@ -10,34 +10,34 @@
   align-items: center;
   margin: 0;
   padding: 0;
-
-  &:not(.features__wrapper--wrap) {
-    overflow: hidden;
-    height: 786px;
-    background: url(../img/bg-triangle-white.svg) no-repeat;
-    background-size: auto 28px;
-    background-color: #f2f2f2;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 157px;
-    height: 277px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-49.2%);
-    background: url("../img/iphone-screen-mobile@1x.png") no-repeat, url("../img/iphone-screen-mobile@2x.png") no-repeat;
-    background-size: 156px auto;
-  }
 }
+
+.features__wrapper:not(.features__wrapper--wrap) {
+  overflow: hidden;
+  background: url("../img/bg-triangle-white.svg") no-repeat;
+  background-size: auto 28px;
+  background-color: #f2f2f2;
+}
+
+.features__wrapper::after {
+  content: "";
+  position: absolute;
+  width: 157px;
+  height: 277px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-49.2%);
+  background: url("../img/iphone-screen-mobile@1x.png") no-repeat, url("../img/iphone-screen-mobile@2x.png") no-repeat;
+  background-size: 156px auto;
+}
+
 
 .features__title {
   background-color: @color-white;
   padding: 16px 0 8px;
 }
 
-.features__title p {
+.features__heading {
   color: @color-dark-blue;
   text-align: center;
   font-weight: 300;
@@ -45,13 +45,12 @@
   line-height: 29px;
 }
 
-.features__title p:last-child {
+.features__heading--second {
   padding-top: 6px;
 }
 
 .features__item {
   flex-basis: auto;
-  margin-bottom: 7px;
 }
 
 .features__item-title {
@@ -82,7 +81,7 @@
 .features__wrapper--wrap {
   display: flex;
   flex-direction: column;
-  margin: 63px 20px 307px;
+  margin: 63px 20px 303px;
 }
 
 @media (min-width: @tablet-width) {
@@ -98,12 +97,12 @@
     padding: 20px 0 31px;
   }
 
-  .features__title p {
+  .features__heading {
     font-size: 40px;
     margin-bottom: 0;
   }
 
-  .features__title p:last-child {
+  .features__heading--second {
     line-height: 47px;
     margin-top: 0;
     padding: 9px 20px;
@@ -112,25 +111,22 @@
   .features__wrapper {
     margin: 0;
     z-index: 1;
+  }
 
-    &:not(.features__wrapper--wrap) {
-      height: 495px;
-      background-size: auto 62px;
-    }
+  .features__wrapper:not(.features__wrapper--wrap) {
+    background-size: auto 62px;
+  }
 
-    &::after {
-      background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat, url("../img/iphone-screen-3-tablet@2x.png") no-repeat;
-      background-size: 268px 481px, cover;
-      left: 57px;
-      top: 246px;
-      transform: translateX(8%);
-      width: 265px;
-      height: 482px;
-    }
+  .features__wrapper::after {
+    background: url("../img/iphone-screen-3-tablet@1x.png") no-repeat, url("../img/iphone-screen-3-tablet@2x.png") no-repeat;
+    background-size: 268px 481px, cover;
+    margin-left: -180px;
+    width: 265px;
+    height: 482px;
   }
 
   .features__wrapper--wrap {
-    margin: 67px -9px 25px 0;
+    margin: 65px -9px 27px 0;
   }
 
   .features__wrapper:not(.features__wrapper--wrap)::before {
@@ -139,27 +135,22 @@
   }
 
   .features__item-title {
-    margin-bottom: -3px;
-  }
-
-  .features__item {
     text-align: left;
   }
 
-  .features__item:last-child p {
-    margin-top: 15px;
-    margin-left: 2px;
+  .features__item:last-child .features__item-description {
     margin-right: -5px;
   }
 
-  .features__item:last-child h3 {
+  .features__item:last-child .features__item-title {
     margin-top: 21px;
-    margin-left: 3px;
+    margin-left: 1px;
   }
 
   .features__item-description {
     width: 320px;
-    margin-bottom: 11px;
+    margin-bottom: 15px;
+    text-align: left;
   }
 
   .features__item-description br {
@@ -168,20 +159,26 @@
 }
 
 @media (min-width: @desktop-width) {
+  .features__wrapper .container {
+    display: block;
+  }
+
   .features__wrapper--wrap {
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: baseline;
-    margin: 0 0 130px;
+    margin: -1px 0 98px;
+    padding: 0 0 0 36px;
     width: 100%;
   }
 
   .features__wrapper:not(.features__wrapper--wrap) {
-    height: 674px;
+    background-size: 100% auto;
   }
 
   .features__item {
-    width: 249px;
+    width: 245px;
+    margin-right: 75px;
   }
 
   .features__item-title {
@@ -189,7 +186,7 @@
     font-size: 32px;
     line-height: 30px;
     letter-spacing: -1px;
-    margin-top: 55px;
+    margin-top: 56px;
   }
 
   .features__item-title br {
@@ -197,35 +194,36 @@
   }
 
   .features__title {
-    padding: 2px 0 64px;
+    padding: 30px 0 59px;
   }
 
-  .features__title p {
+  .features__heading {
     font-size: 52px;
-    margin-top: 79px;
     margin-left: -2px;
     letter-spacing: -1px;
   }
 
-  .features__title p:last-child {
+  .features__heading--second {
     line-height: 59px;
     padding: 17px 121px;
   }
 
-  .features__item:last-child h3 {
+  .features__item:last-child .features__item-title {
     margin-left: 0;
+    margin-top: 56px;
   }
 
-  .features__item:last-child p {
-    margin-top: 27px;
-    margin-left: 0;
+  .features__item:last-child .features__item-description {
+    margin-left: 3px;
   }
 
   .features__item-description {
     font-size: @font-size-big;
     text-align: center;
+    width: 240px;
     line-height: 30px;
-    margin-top: 26px;
+    margin-top: 28px;
+    margin-left: 4px;
   }
 
   .features__item-description br {
@@ -272,7 +270,7 @@
     content: "";
     display: block;
     width: 300px;
-    height: 335px;
+    height: 300px;
     transform: translateX(-6%);
     background: url("../img/iphone-screen-3-desktop@1x.png") no-repeat;
 

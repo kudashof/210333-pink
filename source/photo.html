@@ -29,16 +29,16 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__site-list">
               <li class="main-nav__item">
-                <a href="index.html">Главная</a>
+                <a class="main-nav__link" href="index.html">Главная</a>
               </li>
               <li class="main-nav__item">
-                <a>Фотографии</a>
+                <a class="main-nav__link">Фотографии</a>
               </li>
               <li class="main-nav__item">
-                <a href="form.html">Конкурс</a>
+                <a class="main-nav__link" href="form.html">Конкурс</a>
               </li>
               <li class="main-nav__item">
-                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
               </li>
             </ul>
           </div>
@@ -49,12 +49,12 @@
     <main class="page-main">
       <div class="page-main__title">
         <div class="container">
-          <h2 class="page-main__title page-main__title--heading-photo">Фотографии пользователей</h2>
+          <h2 class="page-main__heading page-main__heading--photo">Фотографии пользователей</h2>
         </div>
       </div>
       <div class="page-main_wrapper">
         <div class="container">
-          <p class="page-main__text page-main__text--photo">Взгляните на фотографии, которые выкладывают пользователи! <span>Видите, как не хватает ваших?</span></p>
+          <p class="page-main__text page-main__text--photo">Взгляните на фотографии, которые выкладывают пользователи! <span class="page-main__slogan-start">Видите, как не хватает ваших?</span></p>
         </div>
         <div class="container">
           <section class="user-posts user-posts--start">
@@ -64,9 +64,9 @@
                 <source media="(min-width: 660px)" type="image/webp" srcset="img/webp/panorama-tablet@1x.webp 1x, img/webp/panorama-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/webp/panorama-mobile@1x.webp, img/webp/panorama-mobile@2x.webp 2x">
 
-                <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-                <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
+                <img class="user-posts__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
               </picture>
             </div>
             <div class="user-posts__wrapper">
@@ -240,17 +240,17 @@
             </article>
           </section>
         </div>
-        <div class="container">
+        <div class="container page-main__container-text">
           <p class="page-main__text page-main__text--end">
-            <span>Затмите их всех!</span>Выкладывайте все, что накопилось в телефоне!</p>
+            <span class="page-main__slogan">Затмите их всех!</span>Выкладывайте все, что накопилось в телефоне!</p>
         </div>
         <form class="editor" action="https://echo.htmlacademy.ru" method="post">
           <div class="container">
             <div class="editor__wrapper">
               <picture>
-                <source media="(min-width: 960px)" type="webp" srcset="img/webp/photo-road-desktop@1x.webp 1x, img/webp/photo-road-desktop@2x.webp 2x">
-                <source media="(min-width: 660px)" type="webp" srcset="img/webp/photo-road-tablet@1x.webp 1x, img/webp/photo-road-tablet@2x.webp 2x">
-                <source type="webp" srcset="img/webp/photo-road-mobile@1x.webp, img/webp/photo-road-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" type="image/webp" srcset="img/webp/photo-road-desktop@1x.webp 1x, img/webp/photo-road-desktop@2x.webp 2x">
+                <source media="(min-width: 660px)" type="image/webp" srcset="img/webp/photo-road-tablet@1x.webp 1x, img/webp/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-road-mobile@1x.webp, img/webp/photo-road-mobile@2x.webp 2x">
 
                 <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
@@ -258,9 +258,10 @@
               </picture>
               <div class="editor-filters">
                 <ul class="editor-filters__filter">
-                  <li class="editor-filters__filter-name">
-                    <svg width="48px" height="48px">
-                      <use xlink:href="img/sprite.svg#icon-crop"></use>
+                  <li class="editor-filters__filter-name editor-filters__filter-name--active">
+                    <svg class="editor-filters__icon" width="48px" height="48px">
+                      <use xlink:href="img/sprite.svg#icon-editor-crop"></use>
+                    </svg>
                     <span class="visually-hidden">Обрезать</span>
                     <div class="editor-filters__range editor-filters__range--crop">
                       <div class="editor-filters__bar"></div>
@@ -268,8 +269,8 @@
                     </div>
                   </li>
                   <li class="editor-filters__filter-name">
-                    <svg width="48px" height="48px">
-                      <use xlink:href="img/sprite.svg#icon-fill"></use>
+                    <svg class="editor-filters__icon" width="48px" height="48px">
+                      <use xlink:href="img/sprite.svg#icon-editor-fill"></use>
                     </svg>
                     <span class="visually-hidden">Контраст</span>
                     <div class="editor-filters__range editor-filters__range--fill">
@@ -278,8 +279,8 @@
                     </div>
                   </li>
                   <li class="editor-filters__filter-name">
-                    <svg width="31.92px" height="31.92px">
-                      <use xlink:href="img/sprite.svg#icon-contrast"></use>
+                    <svg class="editor-filters__icon" width="31.92px" height="31.92px">
+                      <use xlink:href="img/sprite.svg#icon-editor-contrast"></use>
                     </svg>
                     <span class="visually-hidden">Насыщенность</span>
                     <div class="editor-filters__range editor-filters__range--contrast">
@@ -340,7 +341,7 @@
           <div class="page-footer__copyright copyright">
             <b class="copyright__text">Разработано</b>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <svg width="26.943px" height="34.09px">
+              <svg class="copyright__icon" width="26.943px" height="34.09px">
                 <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
               </svg>
               <span class="visually-hidden">HTML Academy</span>

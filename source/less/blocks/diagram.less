@@ -1,89 +1,85 @@
-@media (max-width: 559px) {
-  .diagram {
-    display: none;
-
-    &__description br {
-      display: none;
-    }
-  }
+.diagram {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .diagram {
+    display: block;
     margin-top: 60px;
     margin-bottom: -36px;
+  }
 
-    &__container {
-      display: flex;
-    }
+  .diagram__container {
+    display: flex;
+  }
 
-    &__left {
-      margin-top: -3px;
-    }
+  .diagram__left {
+    margin-top: -3px;
+  }
 
-    & .diagram__timer {
-      fill: rgb(222, 222, 222);
-    }
+  .diagram__timer {
+    fill: rgb(222, 222, 222);
+  }
 
-    & .diagram__timer--tablet {
-      width: 238px;
-      margin-top: -36px;
-      margin-left: 2px;
-    }
+  .diagram__timer--tablet {
+    width: 238px;
+    margin-top: -36px;
+    margin-left: 2px;
+  }
 
-    & .diagram__timer--desktop {
-      display: none;
-    }
+  .diagram__timer--desktop {
+    display: none;
+  }
 
-    & .diagram__diagram-fill {
-      position: absolute;
-      fill: @color-pink;
-      z-index: 1;
-    }
+  .diagram__diagram-fill {
+    position: absolute;
+    fill: @color-pink;
+    z-index: 1;
+  }
 
-    & .diagram__diagram-fill--tablet {
-      position: relative;
-      top: -284px;
-      margin-left: 20px;
-    }
+  .diagram__diagram-fill--tablet {
+    position: relative;
+    top: -284px;
+    margin-left: 20px;
+  }
 
-    & .diagram__diagram-fill--desktop {
-      display: none;
-    }
+  .diagram__diagram-fill--desktop {
+    display: none;
+  }
 
-    &__left::before {
-      content: "24";
-      position: absolute;
-      font-size: 96px;
-      color: @color-pink;
-      margin-left: 64px;
-      margin-top: 140px;
-      font-weight: 700;
-    }
+  .diagram__left::before {
+    content: "24";
+    position: absolute;
+    font-size: 96px;
+    color: @color-pink;
+    margin-left: 64px;
+    margin-top: 140px;
+    font-weight: 700;
+  }
 
-    &__title {
-      font-size: 30px;
-      line-height: 1.2;
-      margin: 36px 0 -4px;
-    }
+  .diagram__title {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 36px 0 -4px;
+  }
 
-    &__description {
-      color: @color-dark-blue;
-      width: 312px;
-      margin-bottom: 13px;
-    }
+  .diagram__description {
+    color: @color-dark-blue;
+    width: 312px;
+    margin-bottom: 13px;
+  }
 
-    &__description br {
-      display: none;
-    }
+  .diagram__description br {
+    display: none;
+  }
 
-    &__link {
-      color: @color-pink;
-      text-decoration: underline;
-      margin-left: -1px;
-    }
+  .diagram__link {
+    color: @color-pink;
+    text-decoration: underline;
+    margin-left: -1px;
   }
 }
+
 
 @media (min-width: @desktop-width) {
   .diagram .container {
@@ -93,71 +89,71 @@
   .diagram {
     background-color: rgb(242, 242, 242);
     margin: 0;
-    height: 359px;
+    height: 361px;
+  }
 
-    &__left {
-      margin: -50px 0 0 10px;
-      z-index: 1;
-    }
+  .diagram__left {
+    margin: -50px 0 0 10px;
+    z-index: 1;
+  }
 
-    & .diagram__timer--tablet {
-      display: none;
-    }
+  .diagram__timer--tablet {
+    display: none;
+  }
 
-    & .diagram__timer--desktop {
-      display: block;
-      width: 398px;
-      margin-left: -48px;
-    }
+  .diagram__timer--desktop {
+    display: block;
+    width: 398px;
+    margin-left: -48px;
+  }
 
-    & .diagram__diagram-fill--tablet {
-      display: none;
-    }
+  .diagram__diagram-fill--tablet {
+    display: none;
+  }
 
-    & .diagram__diagram-fill--desktop {
-      display: block;
-      margin-top: -277px;
-      margin-left: -1px;
-      fill: @color-pink;
-      z-index: 1;
-    }
+  .diagram__diagram-fill--desktop {
+    display: block;
+    margin-top: -277px;
+    margin-left: -1px;
+    fill: @color-pink;
+    z-index: 1;
+  }
 
-    &__right {
-      margin-left: 16px;
-      margin-top: 5px;
-    }
+  .diagram__right {
+    margin-left: 16px;
+    margin-top: 2px;
+  }
 
-    &__left::before {
-      font-size: 119px;
-      margin-left: 79px;
-      margin-top: 177px;
-    }
+  .diagram__left::before {
+    font-size: 119px;
+    margin-left: 79px;
+    margin-top: 177px;
+  }
 
-    &__left::after {
-      background-size: 297px 220px;
-      transform: translateY(-118%);
-      width: 258px;
-      height: 225px;
-    }
+  .diagram__left::after {
+    background-size: 297px 220px;
+    transform: translateY(-118%);
+    width: 258px;
+    height: 225px;
+  }
 
-    &__description {
-      font-size: @font-size-big;
-      line-height: 29px;
-      width: 526px;
-      margin-bottom: 34px;
-    }
+  .diagram__description {
+    font-size: @font-size-big;
+    line-height: 29px;
+    width: 526px;
+    margin-bottom: 34px;
+  }
 
-    &__title {
-      margin: 38px 0 22px -1px;
-    }
+  .diagram__title {
+    margin: 41px 0 22px -1px;
+  }
 
-    &__title br {
-      display: none;
-    }
+  .diagram__title br {
+    display: none;
+  }
 
-    &__link {
-      font-size: @font-size-big;
-      line-height: 30px;
-    }
+  .diagram__link {
+    font-size: @font-size-big;
+    line-height: 30px;
   }
 }

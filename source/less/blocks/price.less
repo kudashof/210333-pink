@@ -1,8 +1,7 @@
 .price {
   overflow: hidden;
-  height: 505px;
   background: url("../img/bg-triangle-white.svg") no-repeat;
-  background-size: 835px;
+  background-size: 100% auto;
   background-color: rgb(242, 242, 242);
 }
 
@@ -14,7 +13,7 @@
 .price__toggles {
   display: flex;
   justify-content: space-between;
-  margin: 45px 132px 6px;
+  margin: 45px 132px 45px;
 }
 
 .price__toggle--active {
@@ -26,10 +25,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .price {
-    height: 391px;
-  }
-
   .price__toggles {
     display: none;
   }
@@ -37,12 +32,7 @@
 
 @media (min-width: @desktop-width) {
   .price {
-    height: 526px;
-    background-size: auto 125px;
-    margin-top: 148px;
-
-    &__wrapper {
-      margin-top: 149px;
-    }
+    background-size: 100% auto;
+    margin-top: 155px;
   }
 }
